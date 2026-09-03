@@ -4,12 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Tienda J.F.B. | Colegio Juan Francisco Bohórquez</title>
-
-    <meta name="description"
-          content="Tienda virtual del Colegio Juan Francisco Bohórquez.">
-
+    <meta name="description" content="Tienda virtual del Colegio Juan Francisco Bohórquez.">
     <link rel="stylesheet" href="estilos.css">
 </head>
 
@@ -18,11 +14,8 @@
     <!-- =====================================================
          ENCABEZADO
          ===================================================== -->
-
     <header class="header">
-
         <div class="header-contenedor">
-
             <a href="#" class="logo">
                 <span class="logo-icono">🏫</span>
                 <span class="logo-texto">
@@ -36,67 +29,39 @@
                 🛒 <span>Carrito</span>
                 <strong id="cantidadCarrito">0</strong>
             </button>
-
         </div>
-
     </header>
-
 
     <!-- =====================================================
          CONTENIDO PRINCIPAL
          ===================================================== -->
-
-    <main>
-
-        
-
-
+    <main> 
         <!-- =================================================
              PRODUCTOS
              ================================================= -->
-
         <section class="seccion-productos" id="productos">
-
             <div class="seccion-titulo">
-
                 <span>CATÁLOGO</span>
-
                 <h2>Nuestros productos</h2>
-
-                <p>
-                    Selecciona los productos que deseas comprar.
-                </p>
-
+                <p>Selecciona los productos que deseas comprar.</p>
             </div>
 
-
             <!-- BUSCADOR -->
-
             <div class="buscador-contenedor">
-
                 <label for="buscadorProductos">
                     Buscar producto
                 </label>
-
                 <input
                     type="search"
                     id="buscadorProductos"
                     placeholder="Escribe el nombre del producto..."
-                    autocomplete="off"
-                >
-
+                    autocomplete="off">
             </div>
 
-
             <!-- CONTENEDOR DE TARJETAS -->
-
             <div class="productos-grid" id="listaProductos">
 
-
-                <!-- =========================================
-                     PRODUCTO 1
-                     ========================================= -->
-
+                        <!-- PRODUCTO 1 -->
                 <article class="producto-card">
                     <div class="producto-imagen">
                         <img
@@ -113,7 +78,6 @@
                         <p class="producto-precio">
                             Bs. 80
                         </p>
-
                         <button
                             class="btn-agregar"
                             type="button"
@@ -124,33 +88,22 @@
                     </div>
                 </article>
 
-
-                <!-- =========================================
-                     PRODUCTO 2
-                     ========================================= -->
-
+                        <!-- PRODUCTO 2 -->
                 <article class="producto-card">
-
                     <div class="producto-imagen">
                         <img
                             src="Imagenes/taza.jpg"
                             alt="Taza institucional J.F.B."
-                            loading="lazy"
-                        >
+                            loading="lazy">
                     </div>
-
                     <div class="producto-info">
-
                         <h3>Taza J.F.B.</h3>
-
                         <p class="producto-descripcion">
                             Lleva siempre contigo un recuerdo del Colegio J.F.B.
                         </p>
-
                         <p class="producto-precio">
                             Bs. 15
                         </p>
-
                         <button
                             class="btn-agregar"
                             type="button"
@@ -158,109 +111,71 @@
                             data-precio="15">
                             🛒 Agregar al carrito
                         </button>
-
                     </div>
-
                 </article>
 
-
-                <!-- =========================================
-                     PRODUCTO 3
-                     ========================================= -->
-
+                        <!-- PRODUCTO 3 -->
                 <article class="producto-card">
-
                     <div class="producto-imagen">
                         <img
                             src="imagenes/pantalon.jpg"
                             alt="Pantalón institucional J.F.B."
-                            loading="lazy"
-                        >
+                            loading="lazy">
                     </div>
-
                     <div class="producto-info">
-
                         <h3>Pantalón J.F.B.</h3>
-
                         <p class="producto-descripcion">
                             Pantalón institucional del colegio.
                         </p>
-
                         <p class="producto-precio">
                             Bs. 90
                         </p>
-
                         <button
                             class="btn-agregar"
                             type="button"
                             data-nombre="Pantalón J.F.B."
-                            data-precio="90"
-                        >
+                            data-precio="90">
                             🛒 Agregar al carrito
                         </button>
-
                     </div>
-
                 </article>
 
-
-                <!-- =========================================
-                     PRODUCTO 4
-                     ========================================= -->
-
+                    <!-- PRODUCTO 4 -->
                 <article class="producto-card">
-
                     <div class="producto-imagen">
                         <img
                             src="imagenes/gorra.jpg"
                             alt="Gorra J.F.B."
-                            loading="lazy"
-                        >
+                            loading="lazy">
                     </div>
-
                     <div class="producto-info">
-
                         <h3>Gorra J.F.B.</h3>
-
                         <p class="producto-descripcion">
                             Gorra institucional del colegio.
                         </p>
-
                         <p class="producto-precio">
                             Bs. 50
                         </p>
-
                         <button
                             class="btn-agregar"
                             type="button"
                             data-nombre="Gorra J.F.B."
-                            data-precio="50"
-                        >
+                            data-precio="50">
                             🛒 Agregar al carrito
                         </button>
-
                     </div>
-
                 </article>
-
-
             </div>
 
-
             <!-- MENSAJE SI NO SE ENCUENTRAN PRODUCTOS -->
-
             <p
                 class="sin-resultados"
                 id="sinResultados"
-                hidden
-            >
+                hidden>
                 No encontramos productos con esa búsqueda.
             </p>
-
         </section>
-
     </main>
-
 
     <!-- =====================================================
          CARRITO
@@ -269,75 +184,51 @@
     <aside
         class="carrito-panel"
         id="carritoPanel"
-        aria-hidden="true"
-    >
-
+        aria-hidden="true">
         <div class="carrito-header">
-
             <div>
                 <span class="carrito-titulo-icono">🛒</span>
                 <h2>Mi carrito</h2>
             </div>
-
             <button
                 class="btn-cerrar"
                 id="btnCerrarCarrito"
                 type="button"
-                aria-label="Cerrar carrito"
-            >
+                aria-label="Cerrar carrito">
                 ✕
             </button>
-
         </div>
-
 
         <!-- PRODUCTOS DEL CARRITO -->
 
         <div
             class="carrito-productos"
-            id="carritoProductos"
-        >
-
+            id="carritoProductos">
             <div class="carrito-vacio" id="carritoVacio">
-
                 <span>🛒</span>
-
                 <h3>Tu carrito está vacío</h3>
-
                 <p>
                     Agrega productos para comenzar tu pedido.
                 </p>
-
             </div>
-
         </div>
 
-
         <!-- RESUMEN -->
-
         <div class="carrito-resumen">
-
             <div class="carrito-total">
-
                 <span>Total</span>
-
                 <strong>
                     Bs. <span id="totalCarrito">0.00</span>
                 </strong>
-
             </div>
-
             <button
                 class="btn-realizar-pedido"
                 id="btnRealizarPedido"
                 type="button"
-                disabled
-            >
+                disabled>
                 📝 Realizar pedido
             </button>
-
         </div>
-
     </aside>
 
 
