@@ -1,0 +1,684 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tienda J.F.B. | Colegio Juan Francisco Bohórquez</title>
+
+    <meta name="description"
+          content="Tienda virtual del Colegio Juan Francisco Bohórquez.">
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         ENCABEZADO
+         ===================================================== -->
+
+    <header class="header">
+
+        <div class="header-contenedor">
+
+            <a href="#" class="logo">
+                <span class="logo-icono">🏫</span>
+                <span class="logo-texto">
+                    <strong>TIENDA J.F.B.</strong>
+                    <small>Colegio Juan Francisco Bohórquez</small>
+                </span>
+            </a>
+
+            <!-- Botón del carrito -->
+            <button class="btn-carrito" id="btnCarrito" type="button">
+                🛒 <span>Carrito</span>
+                <strong id="cantidadCarrito">0</strong>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+         ===================================================== -->
+
+    <main>
+
+        
+
+
+        <!-- =================================================
+             PRODUCTOS
+             ================================================= -->
+
+        <section class="seccion-productos" id="productos">
+
+            <div class="seccion-titulo">
+
+                <span>CATÁLOGO</span>
+
+                <h2>Nuestros productos</h2>
+
+                <p>
+                    Selecciona los productos que deseas comprar.
+                </p>
+
+            </div>
+
+
+            <!-- BUSCADOR -->
+
+            <div class="buscador-contenedor">
+
+                <label for="buscadorProductos">
+                    Buscar producto
+                </label>
+
+                <input
+                    type="search"
+                    id="buscadorProductos"
+                    placeholder="Escribe el nombre del producto..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <!-- CONTENEDOR DE TARJETAS -->
+
+            <div class="productos-grid" id="listaProductos">
+
+
+                <!-- =========================================
+                     PRODUCTO 1
+                     ========================================= -->
+
+                <article class="producto-card">
+                    <div class="producto-imagen">
+                        <img
+                            src="imagenes/polera.jpg"
+                            alt="Polera institucional J.F.B."
+                            loading="lazy">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Polera y corto J.F.B.</h3>
+                        <p class="producto-descripcion">                           
+                            Conjunto cómodo y fresco, ideal para 
+                            actividades deportivas y escolares.
+                        </p>
+                        <p class="producto-precio">
+                            Bs. 80
+                        </p>
+
+                        <button
+                            class="btn-agregar"
+                            type="button"
+                            data-nombre="Polera J.F.B."
+                            data-precio="80">
+                            🛒 Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- =========================================
+                     PRODUCTO 2
+                     ========================================= -->
+
+                <article class="producto-card">
+
+                    <div class="producto-imagen">
+                        <img
+                            src="imagenes/taza.jpg"
+                            alt="Taza institucional J.F.B."
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="producto-info">
+
+                        <h3>Taza J.F.B.</h3>
+
+                        <p class="producto-descripcion">
+                            Lleva siempre contigo un recuerdo del Colegio J.F.B.
+                        </p>
+
+                        <p class="producto-precio">
+                            Bs. 15
+                        </p>
+
+                        <button
+                            class="btn-agregar"
+                            type="button"
+                            data-nombre="Taza J.F.B."
+                            data-precio="15">
+                            🛒 Agregar al carrito
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================================
+                     PRODUCTO 3
+                     ========================================= -->
+
+                <article class="producto-card">
+
+                    <div class="producto-imagen">
+                        <img
+                            src="imagenes/pantalon.jpg"
+                            alt="Pantalón institucional J.F.B."
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="producto-info">
+
+                        <h3>Pantalón J.F.B.</h3>
+
+                        <p class="producto-descripcion">
+                            Pantalón institucional del colegio.
+                        </p>
+
+                        <p class="producto-precio">
+                            Bs. 90
+                        </p>
+
+                        <button
+                            class="btn-agregar"
+                            type="button"
+                            data-nombre="Pantalón J.F.B."
+                            data-precio="90"
+                        >
+                            🛒 Agregar al carrito
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================================
+                     PRODUCTO 4
+                     ========================================= -->
+
+                <article class="producto-card">
+
+                    <div class="producto-imagen">
+                        <img
+                            src="imagenes/gorra.jpg"
+                            alt="Gorra J.F.B."
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="producto-info">
+
+                        <h3>Gorra J.F.B.</h3>
+
+                        <p class="producto-descripcion">
+                            Gorra institucional del colegio.
+                        </p>
+
+                        <p class="producto-precio">
+                            Bs. 50
+                        </p>
+
+                        <button
+                            class="btn-agregar"
+                            type="button"
+                            data-nombre="Gorra J.F.B."
+                            data-precio="50"
+                        >
+                            🛒 Agregar al carrito
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- MENSAJE SI NO SE ENCUENTRAN PRODUCTOS -->
+
+            <p
+                class="sin-resultados"
+                id="sinResultados"
+                hidden
+            >
+                No encontramos productos con esa búsqueda.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         CARRITO
+         ===================================================== -->
+
+    <aside
+        class="carrito-panel"
+        id="carritoPanel"
+        aria-hidden="true"
+    >
+
+        <div class="carrito-header">
+
+            <div>
+                <span class="carrito-titulo-icono">🛒</span>
+                <h2>Mi carrito</h2>
+            </div>
+
+            <button
+                class="btn-cerrar"
+                id="btnCerrarCarrito"
+                type="button"
+                aria-label="Cerrar carrito"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <!-- PRODUCTOS DEL CARRITO -->
+
+        <div
+            class="carrito-productos"
+            id="carritoProductos"
+        >
+
+            <div class="carrito-vacio" id="carritoVacio">
+
+                <span>🛒</span>
+
+                <h3>Tu carrito está vacío</h3>
+
+                <p>
+                    Agrega productos para comenzar tu pedido.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- RESUMEN -->
+
+        <div class="carrito-resumen">
+
+            <div class="carrito-total">
+
+                <span>Total</span>
+
+                <strong>
+                    Bs. <span id="totalCarrito">0.00</span>
+                </strong>
+
+            </div>
+
+            <button
+                class="btn-realizar-pedido"
+                id="btnRealizarPedido"
+                type="button"
+                disabled
+            >
+                📝 Realizar pedido
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- FONDO DEL CARRITO -->
+
+    <div
+        class="overlay"
+        id="overlay"
+        hidden
+    ></div>
+
+
+    <!-- =====================================================
+         VENTANA DEL FORMULARIO
+         ===================================================== -->
+
+    <div
+        class="modal"
+        id="modalPedido"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="tituloFormulario"
+    >
+
+        <div class="modal-contenido">
+
+            <div class="modal-header">
+
+                <div>
+                    <span>📝</span>
+                    <h2 id="tituloFormulario">
+                        Datos del pedido
+                    </h2>
+                </div>
+
+                <button
+                    class="btn-cerrar-modal"
+                    id="btnCerrarModal"
+                    type="button"
+                    aria-label="Cerrar formulario"
+                >
+                    ✕
+                </button>
+
+            </div>
+
+
+            <form id="formularioPedido" novalidate>
+
+                <!-- NOMBRE -->
+
+                <div class="campo">
+
+                    <label for="nombre">
+                        Nombre completo *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Escribe tu nombre completo"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- TIPO DE PERSONA -->
+
+                <div class="campo">
+
+                    <label for="tipoPersona">
+                        ¿Quién eres? *
+                    </label>
+
+                    <select
+                        id="tipoPersona"
+                        name="tipoPersona"
+                        required
+                    >
+
+                        <option value="">
+                            Selecciona una opción
+                        </option>
+
+                        <option value="Alumno actual">
+                            Alumno actual
+                        </option>
+
+                        <option value="Exalumno">
+                            Exalumno
+                        </option>
+
+                        <option value="Profesor">
+                            Profesor
+                        </option>
+
+                        <option value="Padre de familia">
+                            Padre de familia
+                        </option>
+
+                        <option value="Público en general">
+                            Público en general
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- CURSO
+                     SOLO APARECE PARA ALUMNO ACTUAL -->
+
+                <div
+                    class="campo campo-curso"
+                    id="campoCurso"
+                    hidden
+                >
+
+                    <label for="curso">
+                        Curso *
+                    </label>
+
+                    <select
+                        id="curso"
+                        name="curso"
+                    >
+
+                        <option value="">
+                            Selecciona tu curso
+                        </option>
+
+                        <option value="1ro A">1ro A</option>
+                        <option value="1ro B">1ro B</option>
+
+                        <option value="2do A">2do A</option>
+                        <option value="2do B">2do B</option>
+
+                        <option value="3ro A">3ro A</option>
+                        <option value="3ro B">3ro B</option>
+
+                        <option value="4to A">4to A</option>
+                        <option value="4to B">4to B</option>
+
+                        <option value="5to A">5to A</option>
+                        <option value="5to B">5to B</option>
+
+                        <option value="6to A">6to A</option>
+                        <option value="6to B">6to B</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- TELÉFONO -->
+
+                <div class="campo">
+
+                    <label for="telefono">
+                        Número de teléfono *
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        placeholder="Ej. 70000000"
+                        autocomplete="tel"
+                        inputmode="tel"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- DESCRIPCIÓN -->
+
+                <div class="campo">
+
+                    <label for="descripcion">
+                        Descripción / detalles
+                    </label>
+
+                    <textarea
+                        id="descripcion"
+                        name="descripcion"
+                        rows="4"
+                        placeholder="Ej. Polera talla M, pantalón talla 30, etc."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- FORMA DE ENTREGA -->
+
+                <div class="campo">
+
+                    <label for="entrega">
+                        Forma de entrega *
+                    </label>
+
+                    <select
+                        id="entrega"
+                        name="entrega"
+                        required
+                    >
+
+                        <option value="">
+                            Selecciona una opción
+                        </option>
+
+                        <option value="Recoger en el colegio">
+                            Recoger en el colegio
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- RESUMEN DEL PEDIDO -->
+
+                <div class="formulario-resumen">
+
+                    <h3>Resumen del pedido</h3>
+
+                    <div id="resumenFormulario">
+                        <!-- JavaScript colocará aquí los productos -->
+                    </div>
+
+                    <div class="resumen-total">
+
+                        <span>Total:</span>
+
+                        <strong>
+                            Bs. <span id="totalFormulario">0.00</span>
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOTÓN WHATSAPP -->
+
+                <button
+                    type="submit"
+                    class="btn-whatsapp"
+                >
+
+                    <span class="whatsapp-icono">☏</span>
+
+                    <span>
+                        Enviar pedido por WhatsApp
+                    </span>
+
+                </button>
+
+                <p class="texto-seguridad">
+                    Al enviar, se abrirá WhatsApp con los datos
+                    de tu pedido preparados.
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MENSAJE DE PEDIDO ENVIADO
+         ===================================================== -->
+
+    <div
+        class="modal-confirmacion"
+        id="modalConfirmacion"
+        hidden
+    >
+
+        <div class="confirmacion-contenido">
+
+            <div class="confirmacion-icono">
+                ✓
+            </div>
+
+            <h2>¡Pedido enviado!</h2>
+
+            <p>
+                Tu pedido fue enviado correctamente.
+            </p>
+
+            <p>
+                Te confirmaremos ni bien revisemos
+                nuestro stock.
+            </p>
+
+            <button
+                type="button"
+                id="btnCerrarConfirmacion"
+                class="btn-confirmacion"
+            >
+                Entendido
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         PIE DE PÁGINA
+         ===================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-contenido">
+
+            <strong>Tienda J.F.B.</strong>
+
+            <p>
+                Colegio Juan Francisco Bohórquez
+            </p>
+
+            <small>
+                © 2026 Todos los derechos reservados.
+            </small>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
